@@ -1,19 +1,19 @@
 <template>
   
   <div id="app">
-    <!-- Page navbar -->
-    <nav class="navbar has-background-primary is-fixed-top" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item">
-          <img src="./assets/logo.png" alt="Aegis: a video games music player" width="120" height="40">
-        </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+    <!-- Page navbar, even it's really a hero -->
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <p class="level-item has-text-centered">
+            <img src="./assets/logo.png" alt="" style="height: 50px;">
+          </p>
+          <h1 class="subtitle has-text-centered">
+            My source for all vidya songs
+          </h1>
+        </div>
       </div>
-    </nav>
+    </section>
     <!-- Main app-->
     <HelloWorld/>
   </div>
@@ -33,11 +33,6 @@ export default {
 <style>
 @import "../node_modules/bulma/css/bulma.min.css";
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
 }
 </style>
