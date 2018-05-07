@@ -2,7 +2,7 @@
   
   <div id="app">
     <!-- Page navbar -->
-    <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar has-background-primary is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item">
           <img src="./assets/logo.png" alt="Aegis: a video games music player" width="120" height="40">
