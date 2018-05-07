@@ -32,7 +32,4 @@ export default {
 
 <style>
 @import "../node_modules/bulma/css/bulma.min.css";
-#app {
-  
-}
 </style>
