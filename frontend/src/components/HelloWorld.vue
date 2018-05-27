@@ -8,38 +8,56 @@
             General
           </p>
           <ul class="menu-list">
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
+            <li><a>Home</a></li>
+            <li><a>Favorites</a></li>
+            <li><a>About</a></li>
           </ul>
           <p class="menu-label">
-            Administration
+            Categories
           </p>
           <ul class="menu-list">
-            <li><a>Team Settings</a></li>
-            <li>
-              <a class="is-active">Manage Your Team</a>
-              <ul>
-                <li><a>Members</a></li>
-                <li><a>Plugins</a></li>
-                <li><a>Add a member</a></li>
-              </ul>
-            </li>
-            <li><a>Invitations</a></li>
-            <li><a>Cloud Storage Environment Settings</a></li>
-            <li><a>Authentication</a></li>
-          </ul>
-          <p class="menu-label">
-            Transactions
-          </p>
-          <ul class="menu-list">
-            <li><a>Payments</a></li>
-            <li><a>Transfers</a></li>
-            <li><a>Balance</a></li>
+            <li><a>Action</a></li>
+            <li><a>Adventure</a></li>
+            <li><a>Platform</a></li>
+            <li><a>Role-playing</a></li>
+            <li><a>Racing</a></li>
+            <li><a>Simulation</a></li>
+            <li><a>Strategy</a></li>
+            <li><a>Sports</a></li>
           </ul>
         </aside>
       </div>
       <!-- Main content -->
-      <div class="collumn has-background-light is-three-quarters">
+      <div class="collumn has-background-light">
+        <div class="content is-centered">
+          <table class="table">
+            <thead>
+              <th class="has-text-primary has-text-centered">Number</th>
+              <th class="has-text-primary has-text-centered">Title</th>
+              <th class="has-text-primary has-text-centered">Game</th>
+              <th class="has-text-primary has-text-centered">Artist</th>
+              <th class="has-text-primary has-text-centered">Genre</th>
+              <th class="has-text-primary has-text-centered">Platform</th>
+              <th class="has-text-primary has-text-centered">Play</th>
+            </thead>
+            <tbody>
+              <td class="has-text-weight-normal">1</td>
+              <td class="has-text-weight-normal">Stickerbrush Symphony</td>
+              <td class="has-text-weight-normal">Donkey Kong Country 2: Diddy's Kong Quest</td>
+              <td class="has-text-weight-normal">David Wise</td>
+              <td class="has-text-weight-normal">Platform</td>
+              <td class="has-text-weight-normal">Super Nintendo Entertainment System</td>
+              <td>
+                <av-line
+                  :line-width="1"
+                  line-color="lime"
+                  audio-src="https://cs1.mp3.pm/download/85870084/M0NsaUt5cTh2bFk0N3lXTUZ3UHovVThsQTZicVpMVGp6UnI3U1FHL2o4azJFT2dSK2R3Q0R1ZmlNL3ZoQUswOUg3bUI1VlIyV3RsV1M3eGo5OEIwdE93SDM2VzVBNUFuWmFpQ09DT3hFZm5NbG5oTXAwejBxeEVLSkdjL2psM2Y/Donkey_Kong_Country_2_-_17._Stickerbrush_Symphony_(mp3.pm).mp3">
+                </av-line>
+              </td>
+            </tbody>
+          </table>
+        </div>
+        <!--
         <div class="media">
           <div class="tile is-pulled-right">
             <article class="tile is-child notification is-light">
@@ -55,18 +73,24 @@
             </article>
           </div>
         </div>
+        -->
       </div>
     </div>
   </div>
 </template>
 
+<style>
+</style>
+
 <script>
 import Aplayer from "vue-aplayer";
+import AudioVisual from 'vue-audio-visual'
 
 export default {
   name: "HelloWorld",
   components: {
-    Aplayer
+    Aplayer,
+    AudioVisual
   },
   props: {
     msg: String
