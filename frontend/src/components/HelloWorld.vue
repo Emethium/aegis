@@ -8,7 +8,7 @@
             General
           </p>
           <ul class="menu-list">
-            <li><a>Home</a></li>
+            <li @click="revertFiltering()"><a>Home</a></li>
             <li><a>Contact</a></li>
             <li><a>About</a></li>
             <li><a>Reccomend a song</a></li>
@@ -16,7 +16,7 @@
           <p class="menu-label">
             Categories
           </p>
-          <ul class="menu-list" v-for="c in categories" :key="c.id">
+          <ul class="menu-list" v-for="c in categories" :key="c.id" @click="filterList(c.name)">
             <li><a>{{c.name}}</a></li>
           </ul>
         </aside>
@@ -26,15 +26,12 @@
         <div class="content is-centered">
           <table class="table is-striped is-bordered is-hoverable is-narrow">
             <thead>
-              <th class="has-text-primary has-text-centered">Title</th>
-              <th class="has-text-primary has-text-centered">Game</th>
-              <th class="has-text-primary has-text-centered">Composer</th>
-              <th class="has-text-primary has-text-centered">Genre</th>
-              <th class="has-text-primary has-text-centered">Platform</th>
-              <th class="has-text-primary has-text-centered">Play</th>
+              <th class="has-text-success has-text-centered" v-for="c in collumns" :key="c">
+                  {{c | capitalize}}
+              </th>
             </thead>
             <tbody>
-              <tr v-for="s in songList" :key="s.id">
+              <tr v-for="s in filteredList" :key="s.id">
                 <td class="has-text-weight-normal">{{s.title}}</td>
                 <td class="has-text-weight-normal">{{s.game}}</td>
                 <td class="has-text-weight-normal">{{s.composer}}</td>
@@ -55,23 +52,29 @@
 </template>
 
 <script>
-import AudioVisual from 'vue-audio-visual'
 import data from '../assets/data.json'
 
 export default {
   name: "HelloWorld",
   components: {
-    AudioVisual
   },
   created() {
     this.categories = this.sortByKey(this.categories, "name")
     this.songList = this.sortByKey(this.songList, "title")
+    this.filteredList = this.songList
   },
   data() {
     return {
       songList: data.songs,
-      categories: data.categories
+      filteredList: [],
+      categories: data.categories,
+      collumns: ['title', 'game', 'composer', 'genre', 'platform', 'play'],
     };
+  },
+  filters: {
+    capitalize: function (str) {
+      return str.charAt(0).toUpperCase() + str.slice(1)
+    }
   },
   methods: {
     sortByKey (array, key) {
@@ -80,6 +83,15 @@ export default {
         var y = b[key]
         return ((x < y) ? -1 : ((x > y) ? 1 : 0))
       })
+    },
+    filterList (key) {
+      this.filteredList = this.songList
+      this.filteredList = this.filteredList.filter(function (el) {
+        return el.genre.toLowerCase() == key.toLowerCase()
+      })
+    },
+    revertFiltering () {
+      this.filteredList = this.songList
     }
   }
 };
