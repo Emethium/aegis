@@ -9,22 +9,15 @@
           </p>
           <ul class="menu-list">
             <li><a>Home</a></li>
-            <li><a>Favorites</a></li>
+            <li><a>Contact</a></li>
             <li><a>About</a></li>
+            <li><a>Reccomend a song</a></li>
           </ul>
           <p class="menu-label">
             Categories
           </p>
-          <ul class="menu-list">
-            <li><a>Action</a></li>
-            <li><a>Adventure</a></li>
-            <li><a>Platform</a></li>
-            <li><a>Role-playing</a></li>
-            <li><a>Racing</a></li>
-            <li><a>Simulation</a></li>
-            <li><a>Survivor Horror</a></li>
-            <li><a>Strategy</a></li>
-            <li><a>Sports</a></li>
+          <ul class="menu-list" v-for="c in categories" :key="c.id">
+            <li><a>{{c.name}}</a></li>
           </ul>
         </aside>
       </div>
@@ -33,7 +26,6 @@
         <div class="content is-centered">
           <table class="table is-striped is-bordered is-hoverable is-narrow">
             <thead>
-              <th class="has-text-primary has-text-centered">Number</th>
               <th class="has-text-primary has-text-centered">Title</th>
               <th class="has-text-primary has-text-centered">Game</th>
               <th class="has-text-primary has-text-centered">Composer</th>
@@ -42,8 +34,7 @@
               <th class="has-text-primary has-text-centered">Play</th>
             </thead>
             <tbody>
-              <tr v-for="s in songList.songs" :key="s.id">
-                <td class="has-text-weight-normal">{{s.id}}</td>
+              <tr v-for="s in songList" :key="s.id">
                 <td class="has-text-weight-normal">{{s.title}}</td>
                 <td class="has-text-weight-normal">{{s.game}}</td>
                 <td class="has-text-weight-normal">{{s.composer}}</td>
@@ -63,16 +54,9 @@
   </div>
 </template>
 
-<style>
-.audio  {
-  position: absolute;
-  padding: 1.6em;
-}
-</style>
-
 <script>
 import AudioVisual from 'vue-audio-visual'
-import songs from '../assets/data.json'
+import data from '../assets/data.json'
 
 export default {
   name: "HelloWorld",
@@ -80,12 +64,23 @@ export default {
     AudioVisual
   },
   created() {
-    console.log(this.songList)
+    this.categories = this.sortByKey(this.categories, "name")
+    this.songList = this.sortByKey(this.songList, "title")
   },
   data() {
     return {
-      songList: songs
+      songList: data.songs,
+      categories: data.categories
     };
+  },
+  methods: {
+    sortByKey (array, key) {
+      return array.sort(function (a, b) {
+        var x = a[key]
+        var y = b[key]
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0))
+      })
+    }
   }
 };
 </script>

@@ -6,7 +6,7 @@
            "game": "Donkey Kong Country 2: Diddy's Kong Quest",
            "composer": "David Wise",
            "genre": "Platform",
-           "platform": "Super Nintendo Entertainment System",
+           "platform": "SNES",
            "url": "http://66.90.93.122/ost/donkey-kong-country-02-diddys-kong-quest/dxdjmamx/17.%20Stickerbush%20Symphony.mp3"
        },
        {
@@ -24,7 +24,7 @@
             "game": "Golden Sun",
             "composer": "Motoi Sakuraba",
             "genre": "RPG",
-            "platform": "Gameboy Advanced",
+            "platform": "GBA",
             "url": "http://66.90.93.122/ost/golden-sun/ueobzuur/25%20mercury%20lighthouse%20-%20outside%20venus%20lighthouse.mp3"
         },
         {
@@ -33,7 +33,7 @@
             "game": "Silent Hill 2",
             "composer": "Akira Yamaoka",
             "genre": "Survival Horror",
-            "platform": "Playstation 2",
+            "platform": "PS2",
             "url": "http://66.90.93.122/ost/silent-hill-2-original-soundtrack/kkosmqvu/01%20-%20Theme%20Of%20Laura.mp3"
         },
         {
@@ -42,7 +42,7 @@
             "game": "Castlevania Aria of Sorrow",
             "composer": "Konami Kukeiha Club",
             "genre": "Metroidvania",
-            "platform": "Gameboy Advanced",
+            "platform": "GBA",
             "url": "http://66.90.93.122/ost/castlevania-aria-of-sorrow/yyfupgde/23%20-%20heart%20of%20fire.mp3"
         },
         {
@@ -51,7 +51,7 @@
             "game": "Megaman Zero Collection",
             "composer": "Ippo Yamada",
             "genre": "Platform",
-            "platform": "Gameboy Advanced",
+            "platform": "GBA",
             "url": "http://66.90.93.122/ost/mega-man-zero-collection/wuqaxgqt/02%20-%20Prismatic%20%28Main%20Menu%29.mp3"
         },
         {
@@ -60,7 +60,7 @@
             "game": "The Legend of Zelda: Ocarina of Time",
             "composer": "Koji Kondo",
             "genre": "Action RPG",
-            "platform": "Nintendo 64",
+            "platform": "N64",
             "url": "http://66.90.93.122/ost/legend-of-zelda-ocarina-of-time-original-sound-track/xbsatjkq/19%20-%20Hyrule%20Field%20Main%20Theme.mp3"
         },
         {
@@ -69,8 +69,55 @@
             "game": "Metal Gear Solid 3: Snake Eater",
             "composer": "Harry Gregson-Williams",
             "genre": "Action",
-            "platform": "Playstation 2",
+            "platform": "PS2",
             "url": "http://66.90.93.122/ost/metal-gear-solid-3-snake-eater-original-soundtrack/rdlimrls/101%20snake%20eater.mp3"
         }
+   ],
+   "categories": [
+       {
+           "id": 1,
+           "name": "Action"
+       },
+       {
+           "id": 2,
+           "name": "Action RPG"
+       },
+       {
+           "id": 3,
+           "name": "Aventure"
+       },
+       {
+           "id": 4,
+           "name": "Platform"
+       },
+       {
+           "id": 5,
+           "name": "RPG"
+       },
+       {
+           "id": 6,
+           "name": "Racing"
+       },
+       {
+           "id": 7,
+           "name": "Simulation"
+       },
+       {
+           "id": 8,
+           "name": "Survival Horror"
+       },
+       {
+           "id": 9,
+           "name": "Strategy"
+       },
+       {
+           "id": 10,
+           "name": "Sports"
+       },
+       {
+           "id": 11,
+           "name": "Metroidvania"
+       }
+
    ]
 }
