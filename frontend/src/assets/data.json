@@ -1,0 +1,67 @@
+{
+   "songs": [
+       {
+           "id": 1,
+           "title": "Stickerbrush Symphony",
+           "game": "Donkey Kong Country 2: Diddy's Kong Quest",
+           "composer": "David Wise",
+           "genre": "Platform",
+           "platform": "Super Nintendo Entertainment System",
+           "url": "http://66.90.93.122/ost/donkey-kong-country-02-diddys-kong-quest/dxdjmamx/17.%20Stickerbush%20Symphony.mp3"
+       },
+       {
+            "id": 2,
+            "title": "Zero Opening Stage",
+            "game": "Megaman X: Corrupted",
+            "composer": "NitroFlasher",
+            "genre": "Platform",
+            "platform": "PC",
+            "url": "http://66.90.93.122/ost/megaman-x-corrupted/lderepew/05%20-%20Zero%20Opening%20Stage.mp3"
+        },
+        {
+            "id": 3,
+            "title": "Mercury Lighthouse - Outside",
+            "game": "Golden Sun",
+            "composer": "Motoi Sakuraba",
+            "genre": "RPG",
+            "platform": "Gameboy Advanced",
+            "url": "http://66.90.93.122/ost/golden-sun/ueobzuur/25%20mercury%20lighthouse%20-%20outside%20venus%20lighthouse.mp3"
+        },
+        {
+            "id": 4,
+            "title": "Theme of Laura",
+            "game": "Silent Hill 2",
+            "composer": "Akira Yamaoka",
+            "genre": "Survival Horror",
+            "platform": "Playstation 2",
+            "url": "http://66.90.93.122/ost/silent-hill-2-original-soundtrack/kkosmqvu/01%20-%20Theme%20Of%20Laura.mp3"
+        },
+        {
+            "id": 5,
+            "title": "Heart of Fire",
+            "game": "Castlevania Aria of Sorrow",
+            "composer": "Konami Kukeiha Club",
+            "genre": "Metroidvania",
+            "platform": "Gameboy Advanced",
+            "url": "http://66.90.93.122/ost/castlevania-aria-of-sorrow/yyfupgde/23%20-%20heart%20of%20fire.mp3"
+        },
+        {
+            "id": 6,
+            "title": "",
+            "game": "",
+            "composer": "",
+            "genre": "",
+            "platform": "",
+            "url": ""
+        },
+        {
+            "id": 7,
+            "title": "",
+            "game": "",
+            "composer": "",
+            "genre": "",
+            "platform": "",
+            "url": ""
+        }
+   ]
+}
