@@ -47,21 +47,30 @@
         },
         {
             "id": 6,
-            "title": "",
-            "game": "",
-            "composer": "",
-            "genre": "",
-            "platform": "",
-            "url": ""
+            "title": "Prismatic",
+            "game": "Megaman Zero Collection",
+            "composer": "Ippo Yamada",
+            "genre": "Platform",
+            "platform": "Gameboy Advanced",
+            "url": "http://66.90.93.122/ost/mega-man-zero-collection/wuqaxgqt/02%20-%20Prismatic%20%28Main%20Menu%29.mp3"
         },
         {
             "id": 7,
-            "title": "",
-            "game": "",
-            "composer": "",
-            "genre": "",
-            "platform": "",
-            "url": ""
+            "title": "Hyrule Field",
+            "game": "The Legend of Zelda: Ocarina of Time",
+            "composer": "Koji Kondo",
+            "genre": "Action RPG",
+            "platform": "Nintendo 64",
+            "url": "http://66.90.93.122/ost/legend-of-zelda-ocarina-of-time-original-sound-track/xbsatjkq/19%20-%20Hyrule%20Field%20Main%20Theme.mp3"
+        },
+        {
+            "id": 8,
+            "title": "Snake Eater",
+            "game": "Metal Gear Solid 3: Snake Eater",
+            "composer": "Harry Gregson-Williams",
+            "genre": "Action",
+            "platform": "Playstation 2",
+            "url": "http://66.90.93.122/ost/metal-gear-solid-3-snake-eater-original-soundtrack/rdlimrls/101%20snake%20eater.mp3"
         }
    ]
 }

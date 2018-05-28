@@ -42,7 +42,7 @@
               <th class="has-text-primary has-text-centered">Play</th>
             </thead>
             <tbody>
-              <tr v-for="s in this.songList" :key="s.id">
+              <tr v-for="s in songList.songs" :key="s.id">
                 <td class="has-text-weight-normal">{{s.id}}</td>
                 <td class="has-text-weight-normal">{{s.title}}</td>
                 <td class="has-text-weight-normal">{{s.game}}</td>
@@ -51,7 +51,7 @@
                 <td class="has-text-weight-normal">{{s.platform}}</td>
                 <td>
                   <div style="padding-top: 1em;">
-                    <audio src="http://66.90.93.122/ost/donkey-kong-country-02-diddys-kong-quest/dxdjmamx/17.%20Stickerbush%20Symphony.mp3" ref="foo" controls="true"></audio>
+                    <audio v-bind:src="''+s.url+''" ref="foo" controls="true"></audio>
                   </div>
                 </td>
               </tr>
