@@ -1,22 +1,22 @@
 <template>
-<div class="contact">
-    <div class="section has-background-light">
+<div class="contact has-background-light">
+    <div class="section">
         <div class="columns is-gapless">
             <!-- Page sidebar -->
-            <div class="column has-background-light is-2">
+            <div class="column is-3">
                 <aside class="menu">
                 <p class="menu-label">
                     General
                 </p>
                 <ul class="menu-list">
                     <router-link to="/">Home</router-link>
-                    <li><a>Contact</a></li> 
-                    <li><a>Recommend a song</a></li>
+                    <router-link to="/contact">Contact</router-link>
+                    <router-link to="/recommend">Recommend a song</router-link>
                 </ul>
                 </aside>
             </div>
             <!-- Main content -->
-            <div class="column has-background-light is-narrow">
+            <div class="column is-6">
                 <div class="content">
                     <div class="control is-centered">
                         <div class="level">
@@ -51,7 +51,7 @@
                             <div class="level-item">
                                 <p class="buttons">
                                     <a class="button is-primary is-rounded is-focused is-large">
-                                        <span>Send</span>
+                                        <span>Feed me mails!</span>
                                     </a>
                                 </p>
                             </div>

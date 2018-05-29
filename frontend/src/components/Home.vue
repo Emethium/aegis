@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <div class="section has-background-light">
+  <div class="home has-background-light">
+    <div class="section">
       <div class="columns is-gapless">
         <!-- Page sidebar -->
         <div class="column has-background-light is-2">
@@ -11,7 +11,7 @@
             <ul class="menu-list">
               <li @click="revertFiltering()"><a>Home</a></li>
               <router-link to="/contact">Contact</router-link>
-              <li><a>Recommend a song</a></li>
+              <router-link to="/recommend">Recommend a song</router-link>
             </ul>
             <p class="menu-label">
               Categories
@@ -22,7 +22,7 @@
           </aside>
         </div>
         <!-- Main content -->
-        <div class="column has-background-light">
+        <div class="column">
           <div class="content is-centered">
             <table class="table is-striped is-bordered is-hoverable is-narrow">
               <thead>
