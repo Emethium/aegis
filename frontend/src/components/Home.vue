@@ -1,50 +1,52 @@
 <template>
-  <div class="section has-background-light">
-    <div class="columns">
-      <!-- Page sidebar -->
-      <div class="collumn has-background-light is-one-quarter">
-        <aside class="menu">
-          <p class="menu-label">
-            General
-          </p>
-          <ul class="menu-list">
-            <li @click="revertFiltering()"><a>Home</a></li>
-            <li><a>Contact</a></li>
-            <li><a>About</a></li>
-            <li><a>Reccomend a song</a></li>
-          </ul>
-          <p class="menu-label">
-            Categories
-          </p>
-          <ul class="menu-list" v-for="c in categories" :key="c.id" @click="filterList(c.name)">
-            <li><a>{{c.name}}</a></li>
-          </ul>
-        </aside>
-      </div>
-      <!-- Main content -->
-      <div class="collumn has-background-light">
-        <div class="content is-centered">
-          <table class="table is-striped is-bordered is-hoverable is-narrow">
-            <thead>
-              <th class="has-text-success has-text-centered" v-for="c in collumns" :key="c">
-                  {{c | capitalize}}
-              </th>
-            </thead>
-            <tbody>
-              <tr v-for="s in filteredList" :key="s.id">
-                <td class="has-text-weight-normal">{{s.title}}</td>
-                <td class="has-text-weight-normal">{{s.game}}</td>
-                <td class="has-text-weight-normal">{{s.composer}}</td>
-                <td class="has-text-weight-normal">{{s.genre}}</td>
-                <td class="has-text-weight-normal">{{s.platform}}</td>
-                <td>
-                  <div style="padding-top: 1em;">
-                    <audio v-bind:src="''+s.url+''" ref="foo" controls="true"></audio>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+  <div class="home">
+    <div class="section has-background-light">
+      <div class="columns">
+        <!-- Page sidebar -->
+        <div class="collumn has-background-light is-one-quarter">
+          <aside class="menu">
+            <p class="menu-label">
+              General
+            </p>
+            <ul class="menu-list">
+              <li @click="revertFiltering()"><a>Home</a></li>
+              <router-link to="/contact">Contact</router-link>
+              <li><a>About</a></li>
+              <li><a>Reccomend a song</a></li>
+            </ul>
+            <p class="menu-label">
+              Categories
+            </p>
+            <ul class="menu-list" v-for="c in categories" :key="c.id" @click="filterList(c.name)">
+              <li><a>{{c.name}}</a></li>
+            </ul>
+          </aside>
+        </div>
+        <!-- Main content -->
+        <div class="collumn has-background-light">
+          <div class="content is-centered">
+            <table class="table is-striped is-bordered is-hoverable is-narrow">
+              <thead>
+                <th class="has-text-success has-text-centered" v-for="c in collumns" :key="c">
+                    {{c | capitalize}}
+                </th>
+              </thead>
+              <tbody>
+                <tr v-for="s in filteredList" :key="s.id">
+                  <td class="has-text-weight-normal has-text-centered">{{s.title}}</td>
+                  <td class="has-text-weight-normal has-text-centered">{{s.game}}</td>
+                  <td class="has-text-weight-normal has-text-centered">{{s.composer}}</td>
+                  <td class="has-text-weight-normal has-text-centered" >{{s.genre}}</td>
+                  <td class="has-text-weight-normal has-text-centered">{{s.platform}}</td>
+                  <td>
+                    <div style="padding-top: 1em;">
+                      <audio v-bind:src="''+s.url+''" ref="foo" controls="true"></audio>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

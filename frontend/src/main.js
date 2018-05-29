@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
-import AudioVisual from 'vue-audio-visual'
+import router from './router'
 
 Vue.config.productionTip = false
-Vue.use(AudioVisual)
 
 new Vue({
-  render: h => h(App)
+  render: h => h(App),
+  router,
+  template: '<App/>',
+  components: { App }
 }).$mount('#app')

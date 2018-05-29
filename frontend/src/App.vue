@@ -14,19 +14,14 @@
         </div>
       </div>
     </section>
-    <!-- Main app-->
-    <Home/>
+    <!-- Component matched by the route will render here -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
-
 export default {
-  name: 'app',
-  components: {
-    Home
-  }
+  name: 'app'
 }
 </script>
 
