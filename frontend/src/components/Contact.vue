@@ -56,6 +56,10 @@
                                 </p>
                             </div>
                         </div>
+                        <!-- Workaround for background not filling entire page-->
+                        <div class="level fill">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,6 +75,9 @@
 textarea {
     width: 900px;
     height: 200px;
+}
+.fill {
+    height: 205px;
 }
 </style>
 
